@@ -7,6 +7,7 @@ import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiX, FiLock, FiEye, FiEyeOff
 import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
 import { HiOutlineDownload } from 'react-icons/hi';
 import API from '../utils/api';
+import img from '/pic.jpeg'
 
 const socialLinks = [
   { icon: <FiGithub />, href: 'https://github.com/Bharat-Kumar-19030', label: 'GitHub' },
@@ -253,10 +254,11 @@ const Hero = ({ onLogin }) => {
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-violet-600 to-cyan-500 animate-gradient bg-300%" />
                 <div className="absolute inset-1 bg-dark-900 rounded-full flex items-center justify-center">
-                  <div className="text-center">
+                  {/* <div className="text-center">
                     <span className="text-7xl sm:text-8xl font-bold text-gradient">BK</span>
                     <p className="text-gray-400 text-sm mt-2 font-mono">&lt;developer /&gt;</p>
-                  </div>
+                  </div> */}
+                  <img src={img} className='rounded-full' alt="BK" />
                 </div>
               </div>
 
