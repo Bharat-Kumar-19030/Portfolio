@@ -90,12 +90,27 @@ router.get('/stats', async (req, res) => {
 router.get('/streak', async (req, res) => {
   try {
     const url = `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USERNAME}&theme=transparent&hide_border=true&ring=7c3aed&fire=06b6d4&currStreakLabel=7c3aed&sideLabels=9ca3af&dates=6b7280&stroke=1f2937`;
-    const response = await axios.get(url, { responseType: 'arraybuffer', timeout: 15000 });
+    const response = await axios.get(url, { 
+      responseType: 'arraybuffer', 
+      timeout: 30000,
+      headers: {
+        'User-Agent': 'Mozilla/5.0',
+      },
+    });
     res.set('Content-Type', 'image/svg+xml');
     res.set('Cache-Control', 'public, max-age=3600');
     res.send(response.data);
   } catch (error) {
-    res.status(502).json({ error: 'Failed to fetch streak image' });
+    console.error('❌ Streak fetch error:', error.message);
+    // Return a fallback SVG instead of JSON error
+    const fallbackSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+      <rect width="800" height="200" fill="#030014" rx="10"/>
+      <text x="400" y="100" font-family="Arial" font-size="16" fill="#9ca3af" text-anchor="middle">
+        GitHub Streak Stats Temporarily Unavailable
+      </text>
+    </svg>`;
+    res.set('Content-Type', 'image/svg+xml');
+    res.send(fallbackSvg);
   }
 });
 
