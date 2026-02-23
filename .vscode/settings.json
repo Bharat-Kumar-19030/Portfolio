@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "npm install": true,
+        "/^node -v; npm -v; Get-Location$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "css.validate": false,
+    "scss.validate": false,
+    "less.validate": false
+}
