@@ -265,6 +265,7 @@ const GitHub = () => {
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-8 h-8 border-3 border-purple-500/30 border-t-purple-400 rounded-full animate-spin" />
                   <p className="text-xs text-gray-500 font-mono">Loading streak stats...</p>
+                  <p className="text-[10px] text-gray-600">Server may take 1-2 min to wake up</p>
                 </div>
               </div>
             )}
@@ -328,9 +329,12 @@ const GitHub = () => {
         {/* Repository Cards */}
         {/* Waking-up banner shown while backend cold-starts */}
         {loading && usingFallback && (
-          <div className="flex items-center justify-center gap-2.5 mb-4 px-4 py-2.5 glass border border-yellow-500/20 rounded-xl max-w-sm mx-auto">
-            <div className="w-3.5 h-3.5 border-2 border-yellow-500/40 border-t-yellow-400 rounded-full animate-spin flex-shrink-0" />
-            <p className="text-xs text-yellow-400/80 font-mono">Waking up server — live repos loading…</p>
+          <div className="flex flex-col items-center gap-2 mb-4 px-4 py-3 glass border border-yellow-500/20 rounded-xl max-w-md mx-auto">
+            <div className="flex items-center gap-2.5">
+              <div className="w-3.5 h-3.5 border-2 border-yellow-500/40 border-t-yellow-400 rounded-full animate-spin flex-shrink-0" />
+              <p className="text-xs text-yellow-400/80 font-mono">Waking up server (1-2 min)...</p>
+            </div>
+            <p className="text-[10px] text-gray-500 text-center">Backend is starting up. Live data will load automatically.</p>
           </div>
         )}
 
