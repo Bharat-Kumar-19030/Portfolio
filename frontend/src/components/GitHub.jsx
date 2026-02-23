@@ -80,6 +80,8 @@ const GitHub = () => {
   const [loading, setLoading] = useState(true);
   const [usingFallback, setUsingFallback] = useState(true);
   const [filter, setFilter] = useState('all');
+  const [streakLoaded, setStreakLoaded] = useState(false);
+  const [streakError, setStreakError] = useState(false);
 
   useEffect(() => {
     fetchGitHubData();
@@ -256,12 +258,33 @@ const GitHub = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex justify-center mb-4 w-full"
         >
-          <img
-            src="/api/github/streak"
-            alt="GitHub Streak"
-            className="glass rounded-xl p-2 w-full max-w-2xl"
-            loading="lazy"
-          />
+          <div className="relative w-full max-w-2xl">
+            {/* Loading skeleton */}
+            {!streakLoaded && !streakError && (
+              <div className="glass rounded-xl p-2 w-full h-52 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-8 h-8 border-3 border-purple-500/30 border-t-purple-400 rounded-full animate-spin" />
+                  <p className="text-xs text-gray-500 font-mono">Loading streak stats...</p>
+                </div>
+              </div>
+            )}
+            {/* Actual image */}
+            <img
+              src="/api/github/streak"
+              alt="GitHub Streak"
+              className={`glass rounded-xl p-2 w-full transition-opacity duration-500 ${
+                streakLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'
+              }`}
+              onLoad={() => setStreakLoaded(true)}
+              onError={() => setStreakError(true)}
+            />
+            {/* Error fallback */}
+            {streakError && (
+              <div className="glass rounded-xl p-8 w-full text-center">
+                <p className="text-sm text-gray-500">Streak stats temporarily unavailable</p>
+              </div>
+            )}
+          </div>
         </motion.div>
 
         {/* Language Filter */}
