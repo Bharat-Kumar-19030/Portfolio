@@ -18,7 +18,8 @@ router.post('/', async (req, res) => {
       data: contact 
     });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to send message. Please try again.' });
+    console.error('❌ Contact save error:', error.message);
+    res.status(500).json({ error: 'Failed to send message. Please try again.', detail: error.message });
   }
 });
 
