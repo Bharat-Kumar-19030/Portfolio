@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiGithub, FiExternalLink, FiCalendar } from 'react-icons/fi';
 import React from 'react';
+import { SiLeetcode } from 'react-icons/si';
 const defaultProjects = [
   {
     _id: 'default-1',
@@ -11,11 +12,22 @@ const defaultProjects = [
     image: '',
     githubLink: 'https://github.com/Bharat-Kumar-19030/BigBite_Foods',
     liveLink: 'https://bigbitefoods.shop',
-    date: 'Dec 2025',
+    date: 'Feb 2026',
     featured: true,
   },
   {
     _id: 'default-2',
+    title: 'SkillStacks - Interactive Skill Showcase',
+    description: 'A centralized platform where developers create profiles and showcase DSA progress, contests, and projects via LeetCode & Github integration.',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub API', 'React', 'Node.js', 'Express', 'MongoDB', 'LeetCode API'],
+    image: '',
+    githubLink: 'https://github.com/Bharat-Kumar-19030/SkillStack',
+    liveLink: 'https://skillstacks.vercel.app/',
+    date: 'Nov 2025',
+    featured: true,
+  },
+  {
+    _id: 'default-3',
     title: 'NexaMart - E Commerce Platform',
     description: 'Full-stack e-commerce platform with product listings, cart, checkout, seller management, user authentication, and responsive mobile-friendly design deployed on cloud.',
     techStack: ['CSS', 'JavaScript', 'Tailwind', 'PHP', 'Gemini API'],
@@ -24,18 +36,7 @@ const defaultProjects = [
     liveLink: 'https://nexamartstore.wuaze.com/',
     date: 'May 2025',
     featured: true,
-  },
-  {
-    _id: 'default-3',
-    title: 'SkillStacks - Interactive Skill Showcase',
-    description: 'Interactive gallery integrating NASA\'s Astronomy Picture of the Day (APOD) API to display daily space images with backend API handling and responsive design.',
-    techStack: ['HTML', 'CSS', 'JavaScript', 'NASA API'],
-    image: '',
-    githubLink: 'https://github.com/Bharat-Kumar-19030/SkillStack',
-    liveLink: 'https://skillstacks.vercel.app/',
-    date: 'Jan 2026',
-    featured: true,
-  },
+  }
 ];
 
 const techColors = {
