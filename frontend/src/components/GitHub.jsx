@@ -268,15 +268,22 @@ const GitHub = () => {
                 </div>
               </div>
             )}
-            {/* Actual image */}
+            {/* Actual image - try backend first, fallback to direct Heroku */}
             <img
-              src="/api/github/streak"
+              src={`${import.meta.env.VITE_API_URL || '/api'}/github/streak`}
               alt="GitHub Streak"
               className={`glass rounded-xl p-2 w-full transition-opacity duration-500 ${
                 streakLoaded ? 'opacity-100' : 'opacity-0 absolute inset-0'
               }`}
               onLoad={() => setStreakLoaded(true)}
-              onError={() => setStreakError(true)}
+              onError={(e) => {
+                // Fallback to direct Heroku call if backend fails
+                if (!e.target.src.includes('herokuapp.com')) {
+                  e.target.src = `https://github-readme-streak-stats.herokuapp.com/?user=${GITHUB_USERNAME}&theme=transparent&hide_border=true&ring=7c3aed&fire=06b6d4&currStreakLabel=7c3aed&sideLabels=9ca3af&dates=6b7280&stroke=1f2937`;
+                } else {
+                  setStreakError(true);
+                }
+              }}
             />
             {/* Error fallback */}
             {streakError && (
