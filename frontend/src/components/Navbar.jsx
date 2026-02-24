@@ -33,7 +33,7 @@ const Navbar = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-dark-900/70 backdrop-blur-2xl shadow-lg shadow-purple-500/5 border-b border-white/5'
+          ? 'bg-dark-900/70 backdrop-blur-2xl shadow-lg shadow-blue-500/5 border-b border-white/5'
           : 'bg-dark-900/60 md:bg-transparent backdrop-blur-xl md:backdrop-blur-none border-b border-white/5 md:border-transparent'
       }`}
     >
@@ -46,11 +46,11 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-2"
             >
-              {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/20">
+              {/* <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
                 <span className="text-lg font-bold text-white font-mono">BK</span>
               </div> */}
               <span className="text-xl font-bold text-white">
-                Bharat<span className="text-gradient"> Kumar</span>
+                Bharat<span className="text-blue-400"> Kumar</span>
               </span>
             </motion.div>
           </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
               >
                 {link.name}
                 <span
-                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full transition-all duration-300 ${
+                  className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full transition-all duration-300 ${
                     activeSection === link.to ? 'w-6' : 'w-0 group-hover:w-4'
                   }`}
                 />
@@ -87,7 +87,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full text-white text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+              className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white text-sm font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
             >
               <FiFileText className="text-base" />
               Resume
@@ -147,7 +147,7 @@ const Navbar = () => {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full text-white text-sm font-semibold w-full"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white text-sm font-semibold w-full"
                 >
                   <FiFileText />
                   View Resume

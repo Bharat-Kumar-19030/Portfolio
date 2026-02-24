@@ -24,14 +24,14 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-white/5">
       {/* Background */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-purple-600/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/5 rounded-full blur-[150px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:p-6 lg:p-8 ">
         <div className="grid md:grid-cols-3 gap-12 ">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-purple-500/20">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center shadow-lg shadow-blue-500/20">
                 <span className="text-lg font-bold text-gray-300 font-mono">BK</span>
               </div>
               <span className="text-xl font-bold text-gray-300">
@@ -49,7 +49,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg glass flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300 text-sm"
+                  className="w-9 h-9 rounded-lg glass flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/30 transition-all duration-300 text-sm"
                   title={social.label}
                 >
                   {social.icon}
@@ -71,9 +71,9 @@ const Footer = () => {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="text-sm text-gray-400 hover:text-purple-400 cursor-pointer transition-colors duration-300 inline-flex items-center gap-1 group"
+                    className="text-sm text-gray-400 hover:text-blue-400 cursor-pointer transition-colors duration-300 inline-flex items-center gap-1 group"
                   >
-                    <span className="w-0 group-hover:w-4 h-px bg-purple-400 transition-all duration-300" />
+                    <span className="w-0 group-hover:w-4 h-px bg-blue-400 transition-all duration-300" />
                     {link.name}
                   </Link>
                 </li>
@@ -88,13 +88,13 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:bharatkumar19030@gmail.com" className="text-sm text-gray-400 hover:text-purple-400 transition-colors flex items-center gap-2">
-                  <FiMail className="text-xs text-purple-400" />
+                <a href="mailto:bharatkumar19030@gmail.com" className="text-sm text-gray-400 hover:text-blue-400 transition-colors flex items-center gap-2">
+                  <FiMail className="text-xs text-blue-400" />
                   bharatkumar19030@gmail.com
                 </a>
               </li>
               <li className="text-sm text-gray-400 flex items-center gap-2">
-                <FiMapPin className="text-xs text-cyan-400 flex-shrink-0" />
+                <FiMapPin className="text-xs text-teal-400 flex-shrink-0" />
                 Phagwara, Punjab, India
               </li>
               <li className="pt-2">
@@ -102,7 +102,7 @@ const Footer = () => {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 glass rounded-lg text-xs font-medium text-gray-300 hover:text-white hover:border-purple-500/30 transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2 glass rounded-lg text-xs font-medium text-gray-300 hover:text-white hover:border-blue-500/30 transition-all"
                 >
                   📄 Download Resume
                 </a>
@@ -113,10 +113,10 @@ const Footer = () => {
             <motion.button
               whileHover={{ y: -3 }}
               whileTap={{ scale: 0.9 }}
-              className="flex mt-10 ml-auto items-center gap-2 text-sm text-gray-500 hover:text-purple-400 transition-colors cursor-pointer group"
+              className="flex mt-10 ml-auto items-center gap-2 text-sm text-gray-500 hover:text-blue-400 transition-colors cursor-pointer group"
             >
               Back to top
-              <span className="w-8 h-8 rounded-lg glass flex items-center justify-center group-hover:bg-purple-500/10 group-hover:border-purple-500/30 transition-all">
+              <span className="w-8 h-8 rounded-lg glass flex items-center justify-center group-hover:bg-blue-500/10 group-hover:border-blue-500/30 transition-all">
                 <FiArrowUp className="text-xs" />
               </span>
             </motion.button>

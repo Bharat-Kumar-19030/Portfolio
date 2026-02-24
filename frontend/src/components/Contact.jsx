@@ -15,14 +15,14 @@ const contactInfo = [
     label: 'Email',
     value: 'bharatkumar19030@gmail.com',
     href: 'mailto:bharatkumar19030@gmail.com',
-    color: 'from-purple-500 to-violet-500',
+    color: 'from-blue-500 to-indigo-500',
   },
   {
     icon: <FiPhone className="text-xl" />,
     label: 'Phone',
     value: '+91 9729024316',
     href: 'tel:+919729024316',
-    color: 'from-cyan-500 to-blue-500',
+    color: 'from-teal-500 to-blue-500',
   },
   {
     icon: <FiMapPin className="text-xl" />,
@@ -76,8 +76,8 @@ const Contact = () => {
   return (
     <section id="contact" className="relative overflow-hidden">
       {/* Background */}
-      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[200px]" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[200px]" />
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[200px]" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-500/5 rounded-full blur-[200px]" />
 
       <div className="section-padding" ref={ref}>
         {/* Section Header */}
@@ -88,13 +88,13 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-purple-400 font-mono text-sm tracking-widest uppercase mb-4 block">
+          <span className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4 block">
             Let's connect
           </span>
           <h2 className="section-title">
-            Get in <span className="text-gradient">Touch</span>
+            Get in <span className="text-blue-400">Touch</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full mx-auto mt-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full mx-auto mt-4" />
           <p className="section-subtitle mt-6">
             Have a project in mind or want to collaborate? Feel free to reach out!
           </p>
@@ -169,7 +169,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Your Name"
-                    className="w-full pl-11 pr-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all text-sm"
+                    className="w-full pl-11 pr-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all text-sm"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     placeholder="Your Email"
-                    className="w-full pl-11 pr-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all text-sm"
+                    className="w-full pl-11 pr-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all text-sm"
                   />
                 </div>
               </div>
@@ -201,7 +201,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Subject (Optional)"
-                  className="w-full pl-11 pr-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all text-sm"
+                  className="w-full pl-11 pr-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all text-sm"
                 />
               </div>
 
@@ -213,7 +213,7 @@ const Contact = () => {
                 required
                 rows={5}
                 placeholder="Your Message..."
-                className="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all text-sm resize-none"
+                className="w-full px-4 py-3.5 bg-white/[0.03] border border-white/[0.08] rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all text-sm resize-none"
               />
 
               {/* Submit Button */}
@@ -222,7 +222,7 @@ const Contact = () => {
                 disabled={loading}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full py-4 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm bg-300% animate-gradient"
+                className="w-full py-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm bg-300% animate-gradient"
               >
                 {loading ? (
                   <>

@@ -125,8 +125,8 @@ const GitHub = () => {
   return (
     <section id="github" className="relative overflow-x-hidden">
       {/* Background */}
-      <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-600/5 rounded-full blur-[150px]" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-[150px]" />
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-600/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-[150px]" />
 
       <div className="section-padding" ref={ref}>
         {/* Section Header */}
@@ -137,13 +137,13 @@ const GitHub = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <span className="text-purple-400 font-mono text-sm tracking-widest uppercase mb-4 block">
+          <span className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4 block">
             Open Source
           </span>
           <h2 className="section-title">
-            GitHub <span className="text-gradient">Activity</span>
+            GitHub <span className="text-blue-400">Activity</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full mx-auto" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full mx-auto" />
           <p className="section-subtitle mt-6">
             Explore my repositories and contributions on GitHub
           </p>
@@ -168,7 +168,7 @@ const GitHub = () => {
               whileHover={{ y: -5 }}
               className="glass-strong p-4 rounded-xl text-center card-hover"
             >
-              <div className="text-purple-400 text-xl mb-2 flex justify-center">{stat.icon}</div>
+              <div className="text-blue-400 text-xl mb-2 flex justify-center">{stat.icon}</div>
               <div className="text-2xl font-bold text-white">{stat.value}</div>
               <div className="text-xs text-gray-500 mt-0.5">{stat.label}</div>
             </motion.div>
@@ -187,14 +187,14 @@ const GitHub = () => {
             {/* Stats Card */}
             {/* <div className="glass-strong rounded-xl p-6 flex-1">
               <div className="flex items-center gap-3 mb-5">
-                <FiGithub className="text-purple-400 text-xl" />
+                <FiGithub className="text-blue-400 text-xl" />
                 <span className="text-white font-semibold">{GITHUB_USERNAME}'s GitHub Stats</span>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 {[
                   { label: 'Total Stars Earned', value: stats.total_stars, color: 'text-yellow-400' },
-                  { label: 'Total Forks', value: stats.total_forks, color: 'text-cyan-400' },
-                  { label: 'Public Repos', value: stats.public_repos, color: 'text-purple-400' },
+                  { label: 'Total Forks', value: stats.total_forks, color: 'text-teal-400' },
+                  { label: 'Public Repos', value: stats.public_repos, color: 'text-blue-400' },
                   { label: 'Followers', value: stats.followers, color: 'text-green-400' },
                 ].map((item) => (
                   <div key={item.label} className="bg-white/5 rounded-lg p-3">
@@ -208,7 +208,7 @@ const GitHub = () => {
             {/* Top Languages */}
             <div className="glass-strong rounded-xl p-6 mb-1 flex-1">
               <div className="flex items-center gap-3 mb-5">
-                <FiGitBranch className="text-cyan-400 text-xl" />
+                <FiGitBranch className="text-teal-400 text-xl" />
                 <span className="text-white font-semibold">Most Used Languages</span>
               </div>
               
@@ -263,7 +263,7 @@ const GitHub = () => {
             {!streakLoaded && !streakError && (
               <div className="glass rounded-xl p-2 w-full h-52 flex items-center justify-center">
                 <div className="flex flex-col items-center gap-3">
-                  <div className="w-8 h-8 border-3 border-purple-500/30 border-t-purple-400 rounded-full animate-spin" />
+                  <div className="w-8 h-8 border-3 border-blue-500/30 border-t-blue-400 rounded-full animate-spin" />
                   <p className="text-xs text-gray-500 font-mono">Loading streak stats...</p>
                   <p className="text-[10px] text-gray-600">Server may take 1-2 min to wake up</p>
                 </div>
@@ -310,7 +310,7 @@ const GitHub = () => {
                 onClick={() => setFilter(lang)}
                 className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                   filter === lang
-                    ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30'
+                    ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
                     : 'glass text-gray-400 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -358,7 +358,7 @@ const GitHub = () => {
                 <div className="flex items-start justify-between mb-3 min-w-0">
                   <div className="flex items-center gap-2 min-w-0 flex-1">
                     <FiGithub className="text-gray-500 flex-shrink-0" />
-                    <h4 className="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors truncate">
+                    <h4 className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors truncate">
                       {repo.name}
                     </h4>
                   </div>

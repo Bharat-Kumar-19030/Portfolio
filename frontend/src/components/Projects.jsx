@@ -40,7 +40,7 @@ const defaultProjects = [
 ];
 
 const techColors = {
-  'React': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+  'React': 'bg-teal-500/10 text-teal-400 border-teal-500/20',
   'Node.js': 'bg-green-500/10 text-green-400 border-green-500/20',
   'Express': 'bg-gray-500/10 text-gray-300 border-gray-500/20',
   'MongoDB': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
@@ -49,9 +49,9 @@ const techColors = {
   'Razorpay': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
   'JavaScript': 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20',
   'CSS': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
-  'Tailwind': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
+  'Tailwind': 'bg-teal-500/10 text-teal-400 border-teal-500/20',
   'PHP': 'bg-indigo-500/10 text-indigo-400 border-indigo-500/20',
-  'Gemini API': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+  'Gemini API': 'bg-blue-500/10 text-blue-400 border-blue-500/20',
   'HTML': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
   'NASA API': 'bg-red-500/10 text-red-400 border-red-500/20',
 };
@@ -63,8 +63,8 @@ const Projects = () => {
   return (
     <section id="projects" className="  relative py-1 overflow-hidden">
       {/* Background */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/5 rounded-full blur-[150px]" />
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[150px]" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-teal-500/5 rounded-full blur-[150px]" />
 
       <div className="section-padding" ref={ref}>
         {/* Section Header */}
@@ -75,14 +75,14 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center "
         >
-          <span className="text-purple-400 font-mono text-sm tracking-widest uppercase mb-4 block">
+          <span className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4 block">
             My work
           </span>
           <div className='flex flex-col items-center '>
           <h2 className="section-title">
-             Turning Ideas Into <span className="text-gradient">Creations</span>
+             Turning Ideas Into <span className="text-blue-400">Creations</span>
           </h2>
-          <div className="w-52 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full mx-auto mt-3" />
+          <div className="w-52 h-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full mx-auto mt-3" />
           <p className="section-subtitle mt-6">
             Here are some of the projects I've worked on recently
           </p>
@@ -127,7 +127,7 @@ const Projects = () => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full glass flex items-center justify-center text-white hover:bg-purple-500/30 transition-colors transform hover:scale-110"
+                      className="w-12 h-12 rounded-full glass flex items-center justify-center text-white hover:bg-blue-500/30 transition-colors transform hover:scale-110"
                     >
                       <FiGithub className="text-xl" />
                     </a>
@@ -137,7 +137,7 @@ const Projects = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 rounded-full glass flex items-center justify-center text-white hover:bg-cyan-500/30 transition-colors transform hover:scale-110"
+                      className="w-12 h-12 rounded-full glass flex items-center justify-center text-white hover:bg-teal-500/30 transition-colors transform hover:scale-110"
                     >
                       <FiExternalLink className="text-xl" />
                     </a>
@@ -194,7 +194,7 @@ const Projects = () => {
                     <span
                       key={i}
                       className={`text-[10px] px-2 py-0.5 rounded-full border font-medium ${
-                        techColors[tech] || 'bg-purple-500/10 text-purple-400 border-purple-500/20'
+                        techColors[tech] || 'bg-blue-500/10 text-blue-400 border-blue-500/20'
                       }`}
                     >
                       {tech}
@@ -211,7 +211,7 @@ const Projects = () => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-purple-400 transition-colors"
+                      className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-blue-400 transition-colors"
                     >
                       <FiGithub /> Source Code
                     </a>
@@ -221,7 +221,7 @@ const Projects = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-teal-400 transition-colors"
                     >
                       Live <FiExternalLink /> 
                     </a>

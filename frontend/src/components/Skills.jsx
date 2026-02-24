@@ -25,7 +25,7 @@ const skillCategories = [
   },
   {
     title: 'Frameworks & Libraries',
-    color: 'from-blue-500 to-cyan-500',
+    color: 'from-blue-500 to-teal-500',
     bgColor: 'bg-blue-500/5',
     borderColor: 'border-blue-500/20',
     hoverGlow: 'hover:shadow-blue-500/10',
@@ -73,8 +73,8 @@ const Skills = () => {
   return (
     <section id="skills" className="relative py-4  overflow-hidden">
       {/* Background */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-purple-600/5 rounded-full blur-[150px]" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-[150px]" />
+      <div className="absolute top-1/2 left-0 w-96 h-96 bg-blue-600/5 rounded-full blur-[150px]" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500/5 rounded-full blur-[150px]" />
 
       <div className="section-padding" ref={ref}>
         {/* Section Header */}
@@ -85,13 +85,13 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center "
         >
-          <span className="text-purple-400 font-mono text-sm tracking-widest uppercase mb-4 block">
+          <span className="text-blue-400 font-mono text-sm tracking-widest uppercase mb-4 block">
             What I work with
           </span>
           <h2 className="section-title">
-            My <span className="text-gradient">Skills</span>
+            My <span className="text-blue-400">Skills</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full mx-auto mt-4" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full mx-auto mt-4" />
           <p className="section-subtitle mt-2">
             Technologies and tools I use to bring ideas to life
           </p>

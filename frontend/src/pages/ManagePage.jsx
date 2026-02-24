@@ -82,7 +82,7 @@ const ManagePage = ({ password, onLogout }) => {
       <div className="border-b border-white/10 bg-black/30 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center">
               <span className="text-sm font-bold font-mono">BK</span>
             </div>
             <div>
@@ -92,7 +92,7 @@ const ManagePage = ({ password, onLogout }) => {
           </div>
           <div className="flex items-center gap-3">
             {unread > 0 && (
-              <span className="px-2.5 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-xs font-semibold">
+              <span className="px-2.5 py-0.5 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs font-semibold">
                 {unread} unread
               </span>
             )}
@@ -119,7 +119,7 @@ const ManagePage = ({ password, onLogout }) => {
         <div className="grid grid-cols-3 gap-4 mb-8">
           {[
             { key: 'all',    label: 'Total',  value: messages.length,          color: 'text-white',       ring: 'border-white/20' },
-            { key: 'unread', label: 'Unread', value: unread,                   color: 'text-purple-400',  ring: 'border-purple-500/40' },
+            { key: 'unread', label: 'Unread', value: unread,                   color: 'text-blue-400',  ring: 'border-blue-500/40' },
             { key: 'read',   label: 'Read',   value: messages.length - unread, color: 'text-emerald-400', ring: 'border-emerald-500/40' },
           ].map(s => (
             <button
@@ -149,7 +149,7 @@ const ManagePage = ({ password, onLogout }) => {
         {loading ? (
           <div className="flex justify-center py-20">
             <div className="flex items-center gap-3 text-gray-400">
-              <div className="w-5 h-5 border-2 border-purple-500/30 border-t-purple-500 rounded-full animate-spin" />
+              <div className="w-5 h-5 border-2 border-blue-500/30 border-t-blue-500 rounded-full animate-spin" />
               <span className="text-sm font-mono">Loading messages...</span>
             </div>
           </div>
@@ -171,7 +171,7 @@ const ManagePage = ({ password, onLogout }) => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className={`glass-strong rounded-xl overflow-hidden border transition-colors ${
-                  msg.read ? 'border-white/5' : 'border-purple-500/20'
+                  msg.read ? 'border-white/5' : 'border-blue-500/20'
                 }`}
               >
                 {/* Message Header */}
@@ -183,8 +183,8 @@ const ManagePage = ({ password, onLogout }) => {
                   <div className="flex-shrink-0">
                     {!msg.read ? (
                       <span className="relative flex h-2.5 w-2.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-purple-500" />
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-500" />
                       </span>
                     ) : (
                       <FiCircle className="text-gray-600 text-xs" />
@@ -242,7 +242,7 @@ const ManagePage = ({ password, onLogout }) => {
                             target="_blank"
                             rel="noopener noreferrer"
                             href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(msg.email)}&su=${encodeURIComponent('Re: ' + (msg.subject || 'Your message'))}&body=${encodeURIComponent(`Hi ${msg.name},\n\n`)}`}
-                            className="flex items-center gap-1.5 px-3 py-1.5 bg-purple-500/20 border border-purple-500/30 rounded-lg text-xs text-purple-300 hover:bg-purple-500/30 transition-colors"
+                            className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-500/20 border border-blue-500/30 rounded-lg text-xs text-blue-300 hover:bg-blue-500/30 transition-colors"
                           >
                             <FiMail className="text-xs" /> Reply via Email
                             <FiExternalLink className="text-[10px]" />

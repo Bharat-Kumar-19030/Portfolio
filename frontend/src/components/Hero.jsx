@@ -55,15 +55,15 @@ const Hero = ({ onLogin }) => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background Orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[150px] animate-blob" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-cyan-500/15 rounded-full blur-[150px] animate-blob animation-delay-2000" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-violet-600/10 rounded-full blur-[120px] animate-pulse-glow" />
+        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[150px] animate-blob" />
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-teal-500/15 rounded-full blur-[150px] animate-blob animation-delay-2000" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[120px] animate-pulse-glow" />
         
         {/* Floating particles */}
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-purple-400/30 rounded-full"
+            className="absolute w-1 h-1 bg-blue-400/30 rounded-full"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -96,13 +96,13 @@ const Hero = ({ onLogin }) => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.2, y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="text-gray-400 hover:text-purple-400 text-xl transition-colors duration-300"
+            className="text-gray-400 hover:text-blue-400 text-xl transition-colors duration-300"
             title={social.label}
           >
             {social.icon}
           </motion.a>
         ))}
-        <div className="w-px h-24 bg-gradient-to-b from-purple-500/50 to-transparent mt-2" />
+        <div className="w-px h-24 bg-gradient-to-b from-blue-500/50 to-transparent mt-2" />
       </motion.div>
 
       {/* Main Content */}
@@ -133,7 +133,7 @@ const Hero = ({ onLogin }) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
               onClick={() => { setShowModal(true); setAuthError(''); setPassword(''); }}
-              className="ml-2 w-2 h-2 rounded-full bg-purple-500/30 hover:bg-purple-500/60 transition-colors"
+              className="ml-2 w-2 h-2 rounded-full bg-blue-500/30 hover:bg-blue-500/60 transition-colors"
               title=""
             />
             </div>
@@ -149,7 +149,7 @@ const Hero = ({ onLogin }) => {
               <span className="text-gradient relative">
                 Bharat Kumar  
                 <motion.span
-                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-purple-500 to-cyan-400 rounded-full"
+                  className="absolute -bottom-2 left-0 h-1 bg-gradient-to-r from-blue-500 to-teal-400 rounded-full"
                   initial={{ width: 0 }}
                   animate={{ width: '100%' }}
                   transition={{ delay: 1, duration: 0.8 }}
@@ -216,7 +216,7 @@ const Hero = ({ onLogin }) => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-purple-400 hover:border-purple-500/30 transition-all duration-300"
+                  className="w-10 h-10 rounded-xl glass flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500/30 transition-all duration-300"
                   title={social.label}
                 >
                   {social.icon}
@@ -235,24 +235,24 @@ const Hero = ({ onLogin }) => {
             <div className="relative overflow-hidden sm:overflow-visible">
               {/* Animated rings */}
               <motion.div
-                className="absolute -inset-4 rounded-full border border-purple-500/20"
+                className="absolute -inset-4 rounded-full border border-blue-500/20"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
               />
               <motion.div
-                className="absolute -inset-8 rounded-full border border-cyan-500/10"
+                className="absolute -inset-8 rounded-full border border-teal-500/10"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
               />
               <motion.div
-                className="absolute -inset-12 rounded-full border border-violet-500/5"
+                className="absolute -inset-12 rounded-full border border-indigo-500/5"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
               />
 
               {/* Profile avatar */}
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-violet-600 to-cyan-500 animate-gradient bg-300%" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-teal-500 animate-gradient bg-300%" />
                 <div className="absolute inset-1 bg-dark-900 rounded-full flex items-center justify-center">
                   {/* <div className="text-center">
                     <span className="text-7xl sm:text-8xl font-bold text-gradient">BK</span>
@@ -264,7 +264,7 @@ const Hero = ({ onLogin }) => {
 
               {/* Floating tech badges */}
               {/* <motion.div
-                className="absolute -top-4 -right-4 px-3 py-1.5 glass rounded-full text-xs font-semibold text-purple-300"
+                className="absolute -top-4 -right-4 px-3 py-1.5 glass rounded-full text-xs font-semibold text-sky-300"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity }}
               >
@@ -278,7 +278,7 @@ const Hero = ({ onLogin }) => {
                 🟢 Node.js
               </motion.div>
               <motion.div
-                className="absolute top-1/2 -right-8 px-3 py-1.5 glass rounded-full text-xs font-semibold text-cyan-300"
+                className="absolute top-1/2 -right-8 px-3 py-1.5 glass rounded-full text-xs font-semibold text-teal-300"
                 animate={{ x: [0, 10, 0] }}
                 transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
               >
@@ -328,7 +328,7 @@ const Hero = ({ onLogin }) => {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors"
+            className="flex flex-col items-center gap-2 text-gray-500 hover:text-blue-400 transition-colors"
           >
             <span className="text-xs font-mono tracking-widest">SCROLL DOWN</span>
             <FiArrowDown className="text-lg" />
@@ -354,7 +354,7 @@ const Hero = ({ onLogin }) => {
               {/* Modal Header */}
               <div className="flex items-center justify-between p-5 border-b border-white/5">
                 <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center">
+                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-blue-600 to-teal-500 flex items-center justify-center">
                     <FiLock className="text-white text-xs" />
                   </div>
                   <div>
@@ -380,7 +380,7 @@ const Hero = ({ onLogin }) => {
                     placeholder="Password"
                     autoFocus
                     required
-                    className="w-full px-4 py-3 pr-10 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all text-sm"
+                    className="w-full px-4 py-3 pr-10 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all text-sm"
                   />
                   <button
                     type="button"
@@ -398,7 +398,7 @@ const Hero = ({ onLogin }) => {
                 <button
                   type="submit"
                   disabled={authLoading || !password}
-                  className="w-full py-3 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl text-white text-sm font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl text-white text-sm font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {authLoading ? (
                     <span className="flex items-center justify-center gap-2">
