@@ -18,7 +18,7 @@ const defaultProjects = [
   {
     _id: 'default-2',
     title: 'SkillStacks - Interactive Skill Showcase',
-    description: 'A centralized platform where developers create profiles and showcase DSA progress, contests, and projects via LeetCode & Github integration.',
+    description: 'A centralized platform where developers create profiles and showcase DSA progress, contests, and projects via LeetCode & Github integration via an sharable portfolio link.',
     techStack: ['HTML', 'CSS', 'JavaScript', 'GitHub API', 'React', 'Node.js', 'Express', 'MongoDB', 'LeetCode API'],
     image: '',
     githubLink: 'https://github.com/Bharat-Kumar-19030/SkillStack',
@@ -29,8 +29,8 @@ const defaultProjects = [
   {
     _id: 'default-3',
     title: 'NexaMart - E Commerce Platform',
-    description: 'Full-stack e-commerce platform with product listings, cart, checkout, seller management, user authentication, and responsive mobile-friendly design deployed on cloud.',
-    techStack: ['CSS', 'JavaScript', 'Tailwind', 'PHP', 'Gemini API'],
+    description: 'An E-commerce platform with product listings, cart, checkout, seller management,product promotions,chatbot for user guidance, user authentication, and responsive mobile-friendly design deployed on cloud.',
+    techStack: ['CSS', 'JavaScript', 'Tailwind','HTML', 'PHP', 'Gemini API'],
     image: '',
     githubLink: 'https://github.com/Bharat-Kumar-19030/NexaMart',
     liveLink: 'https://nexamartstore.wuaze.com/',
@@ -152,7 +152,7 @@ const Projects = () => {
               </div> */}
 
               {/* Ping badge — only on SkillStacks */}
-                  {project._id === 'default-3' && (
+                  {project._id === 'default-2' && (
                     <>
                     <a
                       href="https://skillstacks.vercel.app/profile/bharat"
@@ -223,7 +223,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-cyan-400 transition-colors"
                     >
-                      Live Demo <FiExternalLink /> 
+                      Live <FiExternalLink /> 
                     </a>
                   )}
                 </div>
