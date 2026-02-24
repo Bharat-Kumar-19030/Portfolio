@@ -239,8 +239,9 @@ const ManagePage = ({ password, onLogout }) => {
                         <div className="flex flex-wrap items-center gap-2">
                           {/* Reply via email */}
                           <a
-                          target="_blank"
-                            href={`mailto:${msg.email}?subject=Re: ${encodeURIComponent(msg.subject || 'Your message')}&body=Hi ${encodeURIComponent(msg.name)},%0A%0A`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(msg.email)}&su=${encodeURIComponent('Re: ' + (msg.subject || 'Your message'))}&body=${encodeURIComponent(`Hi ${msg.name},\n\n`)}`}
                             className="flex items-center gap-1.5 px-3 py-1.5 bg-purple-500/20 border border-purple-500/30 rounded-lg text-xs text-purple-300 hover:bg-purple-500/30 transition-colors"
                           >
                             <FiMail className="text-xs" /> Reply via Email
