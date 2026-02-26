@@ -133,7 +133,7 @@ const Hero = ({ onLogin }) => {
               animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
               onClick={() => { setShowModal(true); setAuthError(''); setPassword(''); }}
-              className="ml-2 w-2 h-2 rounded-full bg-blue-500/30 hover:bg-blue-500/60 transition-colors"
+              className="ml-2 w-2 h-2 rounded-full "
               title=""
             />
             </div>
