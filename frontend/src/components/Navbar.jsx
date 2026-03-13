@@ -144,7 +144,7 @@ const Navbar = () => {
                 className="pt-4"
               >
                 <a
-                  href="/resume.pdf"
+                  href="/Bharat_Kumar_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full text-white text-sm font-semibold w-full"

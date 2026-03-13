@@ -98,8 +98,8 @@ const Footer = () => {
                 Phagwara, Punjab, India
               </li>
               <li className="pt-2">
-                <a download="Bharat_Kumar_Resume.pdf"
-                  href="/resume.pdf"
+                <a download
+                  href="/Bharat_Kumar_resume.pdf"
                   className="inline-flex items-center gap-2 px-4 py-2 glass rounded-lg text-xs font-medium text-gray-300 hover:text-white hover:border-blue-500/30 transition-all"
                 >
                   📄 Download Resume
