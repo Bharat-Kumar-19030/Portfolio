@@ -98,7 +98,7 @@ const Footer = () => {
                 Phagwara, Punjab, India
               </li>
               <li className="pt-2">
-                <a
+                <a download="Bharat_Kumar_Resume"
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
