@@ -82,7 +82,7 @@ const Navbar = () => {
           {/* Resume Button - Desktop */}
           <div className="hidden md:flex items-center gap-3">
             <motion.a
-              href="/resume.pdf"
+              href="/Bharat_Kumar_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
